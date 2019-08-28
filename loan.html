@@ -8,22 +8,10 @@
 <body>
 
 
-<h3 color="white" align="center"><b>LOAN PREDICTION</b></h3>
+<h2 color="white" align="center"><b>LOAN PREDICTION</b></h2>
+<hr>
 <form>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="FirstName"><b>First Name</b></label>
-      <input type="text" class="form-control" id="FirstName" placeholder="First Name">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="SecondName"><b>Second Name</b></label>
-      <input type="text" class="form-control" id="SecondName" placeholder="Second Name">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="LoanId"><b>Loan ID</b></label>
-    <input type="text" class="form-control" id="LoanID" placeholder="unique Loan ID">
-  </div>
+  
   <div class="form-group">
   <label for="gender"><b>Gender</b></label><br>
   <input type="radio" name="gender" value="male" > Male<br>
@@ -36,7 +24,9 @@
   <input type="radio" name="married" value="no"> No
   </div>
   
-  <div class="form-group">
+ 
+  
+    <div class="form-group">
   <label for="Dependents"><b>Number of Dependents</b></label> 
  <select name="Dependents">
     <option value="0">0</option>
@@ -46,23 +36,56 @@
 	</select>
   </div>
   
-   <div class="form-group">
+   <div class="form-group" required>
   <label for="employed"><b>Self Employed</b></label><br>
   <input type="radio" name="employed" value="yes" > Yes<br>
   <input type="radio" name="employed" value="no"> No
   </div>
- 
-   <div class="form-group">
+ <div class="form-group">
   <label for="Education"><b>Education</b></label><br>
-  <input type="radio" name="Education" value="Graduate" > Graduate<br>
+  <input type="radio" name="Education" value="Graduate"> Graduate<br>
   <input type="radio" name="Education" value="UnderGraduate"> Under Graduate
+  </div>
+ <div class="form-group">
+    <label for="ApplicantIncome"><b>Applicant Income</b></label>
+    <input type="number" class="form-control" id="ApplicantIncome" placeholder="Applicant Income">
+  </div>
+
+  <div class="form-group">
+    <label for="CoapplicantIncome"><b>Coapplicant Income</b></label>
+    <input type="number" class="form-control" id="CoapplicantIncome" placeholder="Coapplicant Income">
+  </div>
+
+  <div class="form-group">
+    <label for="LoanAmount"><b>Loan Amount</b></label>
+    <input type="number" class="form-control" id="LoanAmount" placeholder="Loan Amount in Thousands">
+  </div>
+
+   <div class="form-group">
+    <label for="LoanAmountTime"><b>Loan Amount Time</b></label>
+    <input type="number" class="form-control" id="LoanAmountTime" placeholder="Loan Amount Time in Months">
+  </div>
+
+     <div class="form-group">
+  <label for="Credithistory"><b>Creadit History Meets guidelines</b></label><br>
+  <input type="radio" name="CreditHistory" value="yes" > Yes<br>
+  <input type="radio" name="CreditHistory" value="no"> No
+  </div>
+
+   <div class="form-group">
+  <label for="PropertyArea"><b>Property Area</b></label> 
+ <select name="PropertyArea">
+    <option value="Urban">Urban</option>
+    <option value="SemiUrban">Semi Urban</option>
+    <option value="Rural">Rular</option>
+  </select>
+  </div>
+  
+  <div class="form-group">
+  <input class="btn btn-primary" type="submit" value="Submit">
   </div>
  
  
- <a href="loan1.html"><button type="button" class="btn btn-primary"> NEXT</button></a>
-</form>
-<img src="loan.jpg" width="50%" height="130px" align="center">
-
 
 </body>
 </html>
