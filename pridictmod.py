@@ -6,7 +6,7 @@ from sklearn import ensemble
 train=pd.read_csv("train.csv")
 test=pd.read_csv("test.csv")
 
-d=[['LP001015','Male','Yes',0,'Graduate','No',5720,0,110,360,1,'Urban','Y']]#random test data
+d=[['LP001015','Male','Yes','0','Graduate','No',5720,0,110,360,1,'Urban','Y']]#random test data
 test=pd.DataFrame(d,columns=['Loan_ID', 'Gender', 'Married', 'Dependents', 'Education', 'Self_Employed', 'ApplicantIncome', 'CoapplicantIncome', 'LoanAmount', 'Loan_Amount_Term', 'Credit_History', 'Property_Area', 'Loan_Status'])
 
 #fill missing categorical values
@@ -33,11 +33,11 @@ if d[0][11]=='Urban':
     td[9]=1
 if d[0][11]=='Semiurban':
     td[8]=1
-if d[0][3]==1:
+if d[0][3]=='1':
     td[3]=1
-if d[0][3]==2:
+if d[0][3]=='2':
     td[4]=1
-if d[0][3]!=0 and d[0][3]!=1 and d[0][3]!=2:
+if d[0][3]!='0' and d[0][3]!='1' and d[0][3]!='2':
     td[5]=1
 testdummy=pd.DataFrame([td],columns=['Credit_History', 'Gender_Male', 'Married_Yes', 'Dependents_1', 'Dependents_2', 'Dependents_3+', 'Education_Not Graduate','Self_Employed_Yes', 'Property_Area_Semiurban', 'Property_Area_Urban'])
 
